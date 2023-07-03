@@ -25,6 +25,10 @@
 - 7:45 react native
 - 8:25 plan component diagram
 
+#### Monday 7/3
+
+- 3pm css styling research- bootstrap or css implemenation
+
 ## Setup/Installation Requirements
  
 1. Clone repository to desired location on your computer.
