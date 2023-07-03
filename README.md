@@ -28,6 +28,7 @@
 #### Monday 7/3
 
 - 3pm css styling research- bootstrap or css implemenation
+- 4pm authentication/ identity
 
 ## Setup/Installation Requirements
  
