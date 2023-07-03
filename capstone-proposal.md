@@ -4,7 +4,7 @@
 
 ##Project's Purpose or Goal: 
 
-Party Shaker will use the NoSQL cloud-hosted database Firebase for user authentication and holding user data and saved recipes that they've created or liked. Users have the ability to create accounts and update saved information. The application will take user input for a single cocktail and returns a large batch recipe based upon how many total cocktails need to be made and how many bottles need to be purchased. 
+Party Shaker will use the NoSQL cloud-hosted database Firestore for user authentication and holding user data and saved recipes that they've created or liked. Users have the ability to create accounts and update saved information. The application will take user input for a single cocktail and returns a large batch recipe based upon how many total cocktails need to be made and how many bottles need to be purchased. 
 
 ##If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here:
 
