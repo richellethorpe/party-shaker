@@ -17,6 +17,8 @@
 ## Description
 - Party Shaker will use the NoSQL cloud-hosted database Firebase for user authentication and holding user data and saved recipes that they've created or liked. Users have the ability to create accounts and update saved information. The application will take user input for a single cocktail and returns a large batch recipe based upon how many total cocktails need to be made and how many bottles need to be purchased. 
 
+### MockUp to go here
+
 ### Research & Planning Log
 #### Friday, 06/17
 - 10:50p-11:23 researching hooks/ api to incorperate.
@@ -29,6 +31,7 @@
 
 - 3pm css styling research- bootstrap or css implemenation
 - 4pm authentication/ identity
+- 5pm mockup research and planning/ color scheme (https://coolors.co/)
 
 ## Setup/Installation Requirements
  
