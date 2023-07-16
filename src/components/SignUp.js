@@ -1,4 +1,4 @@
-import { Alert } from 'bootstrap'
+
 import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
@@ -52,7 +52,7 @@ export default function SignUp() {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type='password' ref={passwordConfirmaRef} required />
             </Form.Group>
-            <Button className="w-100" type="submit">Sign Up</Button>
+            <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
           </Form>
         </Card.Body>
       </Card>
