@@ -9,7 +9,7 @@ import { useAuth } from '../contexts/AuthContext'
 export default function SignUp() {
   const emailRef = useRef()
   const passwordRef = useRef()
-  const passwordConfirmaRef = useRef()
+  const passwordConfirmRef = useRef()
   const { signup } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -18,7 +18,7 @@ export default function SignUp() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    if (passwordRef.current.value !== passwordConfirmaRef.current.value){
+    if (passwordRef.current.value !== passwordConfirmRef.current.value){
       return setError('Passwords do not match')
     }
     try{
@@ -50,7 +50,7 @@ export default function SignUp() {
             </Form.Group>
             <Form.Group id="password-confirm">
               <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control type='password' ref={passwordConfirmaRef} required />
+              <Form.Control type='password' ref={passwordConfirmRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
           </Form>
