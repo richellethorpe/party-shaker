@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "./Header";
-import NewMultiplyCocktailForm from "./MultiplyCocktail";
+// import Header from "./Header";
+// import NewMultiplyCocktailForm from "./MultiplyCocktail";
+import SignUp from "./SignUp";
 
 
 function App(){
   return ( 
-    <React.Fragment>
-      <Header />
-      <NewMultiplyCocktailForm />
-    </React.Fragment>
+    <>
+      <SignUp />
+    </>
   );
 }
 
