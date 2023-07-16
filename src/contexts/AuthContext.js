@@ -21,9 +21,7 @@ export function AuthProvider({children}) {
     return unsubscribe
   }, [])
 
-  auth.onAuthStateChanged(user => {
-    setCurrentUser(user)
-  })
+
   const value = {
     currentUser,
     signup

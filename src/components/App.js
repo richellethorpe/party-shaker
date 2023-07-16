@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from "../contexts/AuthContext";
 // import Header from "./Header";
 // import NewMultiplyCocktailForm from "./MultiplyCocktail";
 import SignUp from "./SignUp";
