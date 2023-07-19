@@ -1,8 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
-// import Header from "./Header";
-// import NewMultiplyCocktailForm from "./MultiplyCocktail";
+
 import Navbar from "./Navbar";
 import { Route, Routes } from "react-router-dom"
 
