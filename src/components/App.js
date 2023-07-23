@@ -3,9 +3,8 @@ import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
 
 import Navbar from "./Navbar";
-import { Route, Routes } from "react-router-dom"
 
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Home";
 import Login from "./Login";
 import SavedRecipes from "./SavedRecipes";
@@ -15,11 +14,11 @@ function App(){
   return ( 
     <>
       <Navbar />
-        <Routes>
+        {/* <Routes>
           <Route path="/" element= { <Home />} />
           <Route path="/savedRecipes" element= { <SavedRecipes />} />
           <Route path="/login" element= { <Login />} />
-        </Routes>
+        </Routes> */}
         {/* <Container className="d-flex align-items-center justify-content-center"style={{minHeight: "100vh"}}>
           <div className="w-100" style={{maxWidth: "400px"}}>
             <Router>
