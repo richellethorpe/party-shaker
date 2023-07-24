@@ -1,39 +1,40 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import { AuthProvider } from "../contexts/AuthContext";
+import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./Home"
+import SavedRecipes from "./SavedRecipes"
+import Login from "./Login"
+import Error from "./Error"
+import Blog from "./Blog"
+// import { Container } from "react-bootstrap";
+// import { AuthProvider } from "../contexts/AuthContext";
 
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./Home";
-import Login from "./Login";
-import SavedRecipes from "./SavedRecipes";
-import Signup from "./Signup";
+
 
 function App(){
   return ( 
-    <>
-      <Navbar />
-        {/* <Routes>
-          <Route path="/" element= { <Home />} />
-          <Route path="/savedRecipes" element= { <SavedRecipes />} />
-          <Route path="/login" element= { <Login />} />
-        </Routes> */}
-        {/* <Container className="d-flex align-items-center justify-content-center"style={{minHeight: "100vh"}}>
-          <div className="w-100" style={{maxWidth: "400px"}}>
-            <Router>
-              <AuthProvider>
-                <Routes>
-                  <Route exact path="/" component={Dashboard} />
-                  <Route path="/signup" component={Signup} />
-                  <Route path="/login" component={Login} />
-                </Routes>
-              </AuthProvider>
-            </Router>
-          </div>
-        </Container> */}
+    
+      <Router>
+        <nav className="nav">
+          <Link to="/">Home</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/savedrecipes">Saved Recipes</Link>
+          <Link to="/blog">Blog</Link>
+
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/savedrecipes" element={<SavedRecipes />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/*" element={<Error />} />
+
+        </Routes>
+      </Router>
+    
       
-    </>
+  
   );
 }
 
