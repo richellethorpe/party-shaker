@@ -1,22 +1,28 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./Home"
-import SavedRecipes from "./SavedRecipes"
-import Login from "./Login"
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default function Navbar() {
   return (
-
-    <nav className="nav">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/savedrecipes" element={<SavedRecipes />} />
-          <Route path="/blog" element={<Blog />} />
-
-        </Routes>
-      </Router>
-    </nav>
+  <nav className="nav">
+    <Link to="/" className="site-title">Party Animal</Link>
+    <ul>
+      
+      <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
+      <CustomLink to="/blog">Blog</CustomLink>
+      <CustomLink to="/login">Login</CustomLink>
+    </ul>
+  </nav>
   )
 }
 
+function CustomLink( {to, children, ...props}){
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({path: resolvedPath.pathname, end: true})
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <a href={to} {...props}>
+        {children}
+      </a>
+    </li>
+  )
+}

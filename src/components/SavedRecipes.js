@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function SavedRecipes() {
   return (
-    <div>
-      SavedRecipes
-    </div>
+    <h1>
+      Saved Recipes
+    </h1>
   )
 }
