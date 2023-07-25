@@ -15,7 +15,7 @@ export default function Navbar() {
       </nav>
       <div class="container">
         <div class="row">
-          <img class='img-fluid w-100 ' src={cocktailBanner} alt="cocktails" />
+          {/* <img class='img-fluid w-100 ' src={cocktailBanner} alt="cocktails" /> */}
         </div>
       </div>
     </>

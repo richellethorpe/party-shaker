@@ -1,10 +1,27 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button, Card }  from 'react-bootstrap'
 
 export default function Home() {
   return (
     <>
-      <h1>Home page</h1>
-      <h2>More info</h2>
+      <div className='HomeMultiplyDrink'>
+       <header className='HomeMultiplyDrink-header'>
+        <Card style={{color: "#000"}}>
+          <Card.Img src="https://www.cupofzest.com/wp-content/uploads/2021/01/Guide-to-Batching-Cocktails-Thumbnail-of-Cocktails.jpg" />
+          <Card.Body>
+            <Card.Title>
+              Already have a drink you want to multiply?
+            </Card.Title>
+            <Card.Text>
+              Find out how much of each ingrediant you need to multiply your cocktail or mocktail to serve all your guests.
+            </Card.Text>
+            <Button variant="success">Multiply your cocktail!</Button>
+          </Card.Body>
+        </Card>
+       </header>
+      </div>
+      
     </>
     
   )
