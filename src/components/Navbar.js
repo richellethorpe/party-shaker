@@ -1,16 +1,24 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import cocktailBanner from "./../img/cocktail-banner.jpeg";
 
 export default function Navbar() {
   return (
-  <nav className="nav">
-    <Link to="/" className="site-title">Party Animal</Link>
-    <ul>
-      
-      <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
-      <CustomLink to="/blog">Blog</CustomLink>
-      <CustomLink to="/login">Login</CustomLink>
-    </ul>
-  </nav>
+    <>
+      <nav className="nav">
+        <Link to="/" className="site-title">Party Animal</Link>
+        <ul>
+          
+          <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
+          <CustomLink to="/blog">Blog</CustomLink>
+          <CustomLink to="/login">Login</CustomLink>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <img class='img-fluid w-100 ' src={cocktailBanner} alt="cocktails" />
+        </div>
+      </div>
+    </>
   )
 }
 
