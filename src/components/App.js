@@ -20,7 +20,7 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
         </Routes>
-      </div>      
+      </div>    
     </>
   );
 }
