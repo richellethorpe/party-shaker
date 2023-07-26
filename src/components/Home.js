@@ -1,8 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Card }  from 'react-bootstrap'
+import { useNavigate } from "react-router-dom"
 
 export default function Home() {
+
+  const navigate =useNavigate();
+
   return (
     <>
       <div className='HomeMultiplyDrink'>
@@ -16,7 +20,7 @@ export default function Home() {
             <Card.Text>
               Find out how much of each ingrediant you need to multiply your cocktail or mocktail to serve all your guests.
             </Card.Text>
-            <Button variant="success">Multiply your cocktail!</Button>
+            <Button onClick={()=> {navigate("/MultiplyForm")}} variant="success">Multiply your cocktail!</Button>
           </Card.Body>
         </Card>
        </header>
