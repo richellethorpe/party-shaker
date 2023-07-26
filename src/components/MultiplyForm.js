@@ -6,11 +6,15 @@ export default function MultiplyForm() {
   return (
     <div>
       <Form>
-        <Form.Group>
-          <Form.Label>Ingrediant #1</Form.Label>
-          <Form.Control type="ingrediant1" placeholder='gin' />
+        <Row>
+          <Col>
+            <Form.Group>
+              <Form.Label>Ingredient #1</Form.Label>
+              <Form.Control type="ingredient1" placeholder='gin' />
 
-        </Form.Group>
+            </Form.Group>
+          </Col>
+        </Row>
       </Form>
     </div>
   )
