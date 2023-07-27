@@ -20,7 +20,7 @@ function App(){
           <Route path="/blog" element={<Blog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
-          <Route path="/muliplyForm" element={<MultiplyForm />} />
+          <Route path="/multiplyForm" element={<MultiplyForm />} />
 
           
         </Routes>

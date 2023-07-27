@@ -1,5 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import cocktailBanner from "./../img/cocktail-banner.jpeg";
+// import cocktailBanner from "./../img/cocktail-banner.jpeg";
 
 export default function Navbar() {
   return (
@@ -11,7 +11,7 @@ export default function Navbar() {
           <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
           <CustomLink to="/login">Login</CustomLink>
-          <CustomLink to="/muliplyForm">MultiplyForm</CustomLink>
+          <CustomLink to="/multiplyForm">MultiplyForm</CustomLink>
 
         </ul>
       </nav>
