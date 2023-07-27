@@ -16,22 +16,22 @@ function MultiplyForm({props}) {
   const [ingrediant1, setIngrediant1] = useState("")
   const navigate = useNavigate();
 
-  function handleNewRecipe(e){
-    e.preventDefault();
-    props.onNewRecipeCreation({
-      ing1: e.target.ingedient1.value,
-      ing1amt: e.target.ingredient1oz.value,
-      ing1: e.target.ingedient2.value,
-      ing1amt: e.target.ingredient2oz.value,
-      ing1: e.target.ingedient3.value,
-      ing1amt: e.target.ingredient3oz.value,
-      ing1: e.target.ingedient4.value,
-      ing1amt: e.target.ingredient4oz.value,
-      totalQty: e.target.drinkQty.value,
-      id: v4()
+  // function handleNewRecipe(e){
+  //   e.preventDefault();
+  //   props.onNewRecipeCreation({
+  //     ing1: e.target.ingedient1.value,
+  //     ing1amt: e.target.ingredient1oz.value,
+  //     ing1: e.target.ingedient2.value,
+  //     ing1amt: e.target.ingredient2oz.value,
+  //     ing1: e.target.ingedient3.value,
+  //     ing1amt: e.target.ingredient3oz.value,
+  //     ing1: e.target.ingedient4.value,
+  //     ing1amt: e.target.ingredient4oz.value,
+  //     totalQty: e.target.drinkQty.value,
+  //     id: v4()
 
-    })
-  }
+  //   })
+  // }
 
 
   return (
@@ -170,7 +170,7 @@ function MultiplyForm({props}) {
   );
 }
 
-MultiplyForm.PropTyes = {
-  onNewRecipeCreation: PropTypes.func
-};
-export default MultiplyForm;
+// MultiplyForm.PropTyes = {
+//   onNewRecipeCreation: PropTypes.func
+// };
+export default MultiplyForm
