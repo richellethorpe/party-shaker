@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function MultiplyForm() {
   return (
+    <>
     <Container>
       <Row className="vh-100 d-flex justify-content-center align-items-center">
         <Col md={10} lg={8} xs={12}>
@@ -19,7 +20,7 @@ export default function MultiplyForm() {
             <Card.Body>
               <div className="mb-3 mt-4">
                 <h2 className="fw-bold mb-2 text-uppercase">Multiply Your Cocktail</h2>
-                <p className=" mb-5">Please enter your cocktail specifications!</p>
+                <p className=" mb-5">Please enter your cocktail specifications</p>
                 <Form>
                   <Row className="mb-3">
                     <Form.Group
@@ -114,6 +115,20 @@ export default function MultiplyForm() {
                       />
                     </Form.Group>
                   </Row>
+                  <Row className="mb-3">
+
+                    <Form.Group
+                      as={Col}
+                      className="mb-3"
+                      controlId="DrinkQty"
+                    >
+                      <Form.Label>How many total cocktails do you want?</Form.Label>
+                      <Form.Control
+                        type="number"  
+                        placeholder="Ex: 200"                
+                      />
+                    </Form.Group>
+                  </Row>
                   <div className="d-grid">
                     <Button variant="primary" type="submit">
                       Multiply!
@@ -127,5 +142,6 @@ export default function MultiplyForm() {
         </Col>
       </Row>
     </Container>
+    </>
   );
 }

@@ -11,6 +11,8 @@ export default function Navbar() {
           <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
           <CustomLink to="/login">Login</CustomLink>
+          <CustomLink to="/muliplyForm">MultiplyForm</CustomLink>
+
         </ul>
       </nav>
       <div class="container">

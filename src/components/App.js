@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import SavedRecipes from "./SavedRecipes";
 import { Route, Routes } from "react-router-dom"
+import MultiplyForm from "./MultiplyForm";
 
 
 function App(){
@@ -19,6 +20,9 @@ function App(){
           <Route path="/blog" element={<Blog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
+          <Route path="/muliplyForm" element={<MultiplyForm />} />
+
+          
         </Routes>
       </div>    
     </>
