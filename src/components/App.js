@@ -7,6 +7,7 @@ import Home from "./Home";
 import SavedRecipes from "./SavedRecipes";
 import { Route, Routes } from "react-router-dom"
 import MultiplyForm from "./MultiplyForm";
+import CocktailRecipe from "./CocktailRecipe";
 
 
 function App(){
@@ -21,6 +22,7 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
+          <Route path="/cocktailRecipe" element={<CocktailRecipe />} />
 
           
         </Routes>

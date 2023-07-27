@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from "prop-types";
-import { v4 } from "uuid"
+import React, {useState} from 'react';
+import { useNavigate } from "react-router-dom";
+// import PropTypes from "prop-types";
+// import { v4 } from "uuid"
 import {
   Col,
   Button,
@@ -11,7 +12,9 @@ import {
 } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function MultiplyForm(props) {
+function MultiplyForm({props}) {
+  const [ingrediant1, setIngrediant1] = useState("")
+  const navigate = useNavigate();
 
   function handleNewRecipe(e){
     e.preventDefault();
@@ -52,7 +55,7 @@ function MultiplyForm(props) {
                       <Form.Label className="text-center">
                         Ingredient #1
                       </Form.Label>
-                      <Form.Control type="text" placeholder="ex: Gin" />
+                      <Form.Control type="text" placeholder="ex: Gin" onChange={(e) => setIngrediant1(e.target.value)} />
                     </Form.Group>
 
                     <Form.Group
@@ -151,7 +154,7 @@ function MultiplyForm(props) {
                     </Form.Group>
                   </Row>
                   <div className="d-grid">
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" onClick={()=> {navigate('/cocktailRecipe', {state:{ingrediant1}})}}>
                       Multiply!
                     </Button>
                   </div>
