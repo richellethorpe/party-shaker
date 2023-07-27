@@ -5,6 +5,7 @@ import SavedRecipes from "./SavedRecipes"
 import Login from "./Login"
 import Error from "./Error"
 import Blog from "./Blog"
+import Navbar from "./Navbar"
 // import { Container } from "react-bootstrap";
 // import { AuthProvider } from "../contexts/AuthContext";
 
@@ -14,8 +15,9 @@ import Blog from "./Blog"
 
 function App(){
   return ( 
-    
-      <Router>
+    <>
+    <Login />
+      {/* <Router>
         <nav className="nav">
           <Link to="/">Home</Link>
           <Link to="/login">Login</Link>
@@ -32,8 +34,8 @@ function App(){
 
         </Routes>
       </Router>
-    
-      
+     */}
+      </>  
   
   );
 }
