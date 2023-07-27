@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom"
 
 export default function Home() {
 
-  const navigate =useNavigate();
+  const navigate =useNavigate();  
 
   return (
     <>
       <div className='HomeMultiplyDrink'>
        <header className='HomeMultiplyDrink-header'>
-        <Card style={{color: "#000"}}>
-          <Card.Img src="https://www.cupofzest.com/wp-content/uploads/2021/01/Guide-to-Batching-Cocktails-Thumbnail-of-Cocktails.jpg" />
+        <Card style={{width: "40rem"}}>
+          <Card.Img src="https://www.cupofzest.com/wp-content/uploads/2021/01/Guide-to-Batching-Cocktails-Thumbnail-of-Cocktails.jpg" alt="a picture of batched cocktails"/>
           <Card.Body>
             <Card.Title>
               Already have a drink you want to multiply?
