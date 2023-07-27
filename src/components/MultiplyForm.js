@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import { v4 } from "uuid"
 import {
   Col,
   Button,
@@ -9,7 +11,26 @@ import {
 } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function MultiplyForm() {
+function MultiplyForm(props) {
+
+  function handleNewRecipe(e){
+    e.preventDefault();
+    props.onNewRecipeCreation({
+      ing1: e.target.ingedient1.value,
+      ing1amt: e.target.ingredient1oz.value,
+      ing1: e.target.ingedient2.value,
+      ing1amt: e.target.ingredient2oz.value,
+      ing1: e.target.ingedient3.value,
+      ing1amt: e.target.ingredient3oz.value,
+      ing1: e.target.ingedient4.value,
+      ing1amt: e.target.ingredient4oz.value,
+      totalQty: e.target.drinkQty.value,
+      id: v4()
+
+    })
+  }
+
+
   return (
     <>
     <Container>
@@ -120,7 +141,7 @@ export default function MultiplyForm() {
                     <Form.Group
                       as={Col}
                       className="mb-3"
-                      controlId="DrinkQty"
+                      controlId="drinkQty"
                     >
                       <Form.Label>How many total cocktails do you want?</Form.Label>
                       <Form.Control
@@ -145,3 +166,8 @@ export default function MultiplyForm() {
     </>
   );
 }
+
+MultiplyForm.PropTyes = {
+  onNewRecipeCreation: PropTypes.func
+};
+export default MultiplyForm;
