@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function MultiplyForm({props}) {
+function MultiplyForm() {
   
   const [recipe, setRecipe] = useState({ingredient1 : "",
                                         ingredient1amt : "",
