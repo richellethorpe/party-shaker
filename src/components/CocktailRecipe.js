@@ -8,14 +8,19 @@ function CocktailRecipe(props) {
   const location = useLocation();
   return (
     <div>
-      <Card>
-        <Row>
+
+      <Container>
+      <Row>
+        <Col>Ingredient #1:</Col>
+        <Col>          
           <h2>Ingredient #1: {location.state.ingredient1}</h2>
+        </Col>
+        <Col>
           <h2> {location.state.ingredient1oz} oz</h2>
-        </Row>
-        <Button>Save to Account</Button>
-      </Card>
-      
+        </Col>
+      </Row>
+      <Button>Save to Account</Button>
+    </Container>
 
 
     </div>
