@@ -1,12 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button, Card, Row, Container, Col }  from 'react-bootstrap'
+import { Button, Card }  from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
 
 
-{/* <h2>: {location.state.ingredient1}</h2> */}
 function CocktailRecipe(props) {
-  
+  const navigate = useNavigate();
   const location = useLocation();
   console.log({location});
   return (
@@ -21,7 +20,7 @@ function CocktailRecipe(props) {
             <ul>{location.state.ingredient3} - {location.state.ingredient3oz}oz </ul>
             <ul>{location.state.ingredient4} - {location.state.ingredient4oz}oz </ul>
           </Card.Text>
-          <Button variant="primary">Save Recipe</Button>
+          <Button variant="primary"onClick={()=> {navigate('/savedRecipes')}}>Save Recipe</Button>
         </Card.Body>
       </Card>
     </div>

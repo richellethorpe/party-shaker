@@ -84,8 +84,7 @@ function MultiplyForm({props}) {
                       <Form.Control
                         type="number"
                         placeholder="Ex: 2 (numbers only)"
-                        onChange={(e) => setIngredient1oz((e.target.value)* (totalQty))}
-                      />
+                        onChange={(e) => setIngredient1oz((e.target.value)* (totalQty))}/>
                     </Form.Group>
                   </Row>
                   <Row className="mb-3">
@@ -160,20 +159,6 @@ function MultiplyForm({props}) {
                         onChange={(e) => setIngredient4oz((e.target.value)* (totalQty))}/>               
                     </Form.Group>
                   </Row>
-                  <Row className="mb-3">
-
-                    <Form.Group
-                      as={Col}
-                      className="mb-3"
-                      controlId="drinkName"
-                    >
-                      <Form.Label>Drink Name</Form.Label>
-                      <Form.Control
-                        type="text"  
-                        placeholder="Gin Fizz"   
-                        onChange={(e) => setDrinkName(e.target.value)}/>            
-                    </Form.Group>
-                    </Row>
                  
                   <div className="d-grid">
                   <Button variant="primary" type="submit" onClick={()=> {navigate('/cocktailRecipe',{state:{ingredient1, ingredient1oz,ingredient2,ingredient2oz, ingredient3, ingredient3oz, ingredient4, ingredient4oz,totalQty, drinkName}})}}>
