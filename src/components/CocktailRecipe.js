@@ -13,7 +13,7 @@ function CocktailRecipe(props) {
           <h2>Ingredient #1: {location.state.ingrediant1}</h2>
           <h2> {location.state.ingrediant1oz} oz</h2>
         </row>
-
+        <Button>Save to Account</Button>
       </Card>
       
 
