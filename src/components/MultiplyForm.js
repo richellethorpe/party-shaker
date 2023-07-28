@@ -13,9 +13,30 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function MultiplyForm({props}) {
-  const [ingrediant1, setIngrediant1] = useState("")
-  const [ingrediant1oz, setIngrediant1oz] = useState("")
+  
+  const [recipe, setRecipe] = useState({ingredient1 : "",
+                                        ingredient1amt : "",
+                                        ingredient2 : "",
+                                        ingredient2amt : "",
+                                        ingredient3 : "",
+                                        ingredient3amt : "",
+                                        ingredient4 : "",
+                                        ingredient4amt : "",
+                                        drinkQty : ""
+                                           })
+
+  const onChangeUser = (e) => {
+    setRecipe({...recipe, [e.target.name] : e.target.value })
+  }
+  
+  // const [ingrediant1, setIngrediant1] = useState("")
+  // const [ingrediant1oz, setIngrediant1oz] = useState("")
   const navigate = useNavigate();
+
+  const onSubmit = (e)=> {
+    e.preventDefault();
+    console.log(recipe);
+  }
 
 
 
@@ -31,7 +52,7 @@ function MultiplyForm({props}) {
               <div className="mb-3 mt-4">
                 <h2 className="fw-bold mb-2 text-uppercase">Multiply Your Cocktail</h2>
                 <p className=" mb-5">Please enter your cocktail specifications</p>
-                <Form>
+                <Form onSubmit={onSubmit}>
                   <Row className="mb-3">
                     <Form.Group
                       as={Col}
@@ -41,7 +62,7 @@ function MultiplyForm({props}) {
                       <Form.Label className="text-center">
                         Ingredient #1
                       </Form.Label>
-                      <Form.Control type="text" placeholder="ex: Gin" onChange={(e) => setIngrediant1(e.target.value)} />
+                      <Form.Control type="text" placeholder="ex: Gin" onChange={onChangeUser} />
                     </Form.Group>
 
                     <Form.Group
@@ -53,7 +74,7 @@ function MultiplyForm({props}) {
                       <Form.Control
                         type="number"
                         placeholder="Ex: 2 (numbers only)"
-                        onChange={(e) => setIngrediant1oz(e.target.value)}
+                        onChange={onChangeUser}
                       />
                     </Form.Group>
                   </Row>
@@ -66,7 +87,8 @@ function MultiplyForm({props}) {
                       <Form.Label className="text-center">
                         Ingredient #2
                       </Form.Label>
-                      <Form.Control type="text" />
+                      <Form.Control type="text" onChange={onChangeUser}/>
+                      
                     </Form.Group>
 
                     <Form.Group
@@ -77,6 +99,7 @@ function MultiplyForm({props}) {
                       <Form.Label>Ounces</Form.Label>
                       <Form.Control
                         type="number"  
+                        onChange={onChangeUser}
                       />
                     </Form.Group>
                   </Row>
@@ -89,7 +112,7 @@ function MultiplyForm({props}) {
                       <Form.Label className="text-center">
                         Ingredient #3
                       </Form.Label>
-                      <Form.Control type="text" />
+                      <Form.Control type="text" onChange={onChangeUser}/>
                     </Form.Group>
 
                     <Form.Group
@@ -99,7 +122,8 @@ function MultiplyForm({props}) {
                     >
                       <Form.Label>Ounces</Form.Label>
                       <Form.Control
-                        type="number"                       
+                        type="number" 
+                        onChange={onChangeUser}                      
                       />
                     </Form.Group>
                   </Row>
@@ -112,7 +136,7 @@ function MultiplyForm({props}) {
                       <Form.Label className="text-center">
                         Ingredient #4
                       </Form.Label>
-                      <Form.Control type="text" />
+                      <Form.Control type="text" onChange={onChangeUser}/>
                     </Form.Group>
 
                     <Form.Group
@@ -122,7 +146,8 @@ function MultiplyForm({props}) {
                     >
                       <Form.Label>Ounces</Form.Label>
                       <Form.Control
-                        type="number"                  
+                        type="number"     
+                        onChange={onChangeUser}             
                       />
                     </Form.Group>
                   </Row>
@@ -136,12 +161,13 @@ function MultiplyForm({props}) {
                       <Form.Label>How many total cocktails do you want?</Form.Label>
                       <Form.Control
                         type="number"  
-                        placeholder="Ex: 200"                
+                        placeholder="Ex: 200"   
+                        onChange={onChangeUser}             
                       />
                     </Form.Group>
                   </Row>
                   <div className="d-grid">
-                    <Button variant="primary" type="submit" onClick={()=> {navigate('/cocktailRecipe', {state:{ingrediant1, ingrediant1oz}})}}>
+                    <Button variant="primary" type="submit" onClick={()=> {navigate('/cocktailRecipe', {state:{recipe}})}}>
                       Multiply!
                     </Button>
                   </div>
