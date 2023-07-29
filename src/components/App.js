@@ -8,15 +8,15 @@ import SavedRecipes from "./SavedRecipes";
 import { Route, Routes } from "react-router-dom"
 import MultiplyForm from "./MultiplyForm";
 import CocktailRecipe from "./CocktailRecipe";
-import Banner from "./Banner";
+import PABanner from "../img/PABanner.png"
 
 function App(){
 
   return ( 
     <>
-  
       <Navbar />
-      <img src='https://mdbootstrap.com/img/new/slides/041.webp' className='img-fluid shadow-4' alt='...' />
+      <img src={PABanner} className='img-fluid shadow-4' alt='...' />
+
       < div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
