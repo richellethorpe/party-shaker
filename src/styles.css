@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  background-color: #FFFCE8;
+  background-color: white
+  ;
 }
 
 .container {
@@ -13,7 +14,7 @@ body {
 }
 
 .nav {
-  background-color: #697a21;
+  background-color: black;
   color:white;
   display: flex;
   justify-content: space-between;
@@ -23,7 +24,7 @@ body {
 }
 
 .site-title {
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .nav ul {
@@ -44,9 +45,11 @@ body {
 }
 
 .nav li.active {
-  background-color: #8ca12f;
+  background-color: rgb(75, 72, 72)
+  ;
 }
 
 .nav li:hover {
-  background-color: #78882e;
+  background-color: rgb(109, 105, 105)
+  ;
 }
