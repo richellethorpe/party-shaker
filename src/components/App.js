@@ -22,11 +22,10 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
-          <Route path="/cocktailRecipe" element={<CocktailRecipe />} />
-
-          
+          <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 
         </Routes>
-      </div>    
+      </div>   
+   
     </>
   );
 }
