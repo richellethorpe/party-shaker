@@ -14,7 +14,9 @@ function App(){
 
   return ( 
     <>
+  
       <Navbar />
+      <img src='https://mdbootstrap.com/img/new/slides/041.webp' className='img-fluid shadow-4' alt='...' />
       < div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
