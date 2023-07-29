@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className='HomeMultiplyDrink'>
        <header className='HomeMultiplyDrink-header'>
-        <Card  style={{width: "30rem"}}>
+        <Card className='multiplyCocktailHome'>
           {/* <Card.Img src="https://www.cupofzest.com/wp-content/uploads/2021/01/Guide-to-Batching-Cocktails-Thumbnail-of-Cocktails.jpg" alt="a picture of batched cocktails"/> */}
           <Card.Body>
             <Card.Title>
