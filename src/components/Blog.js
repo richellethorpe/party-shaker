@@ -15,11 +15,11 @@ const blogData = [
   },
   {
     id:2,
-    image: require('../img/simple.jpg'),
-    time: '7 April 2023',
-    title: 'Easy Homemade Simply Syrup',
-    description: 'How To Make Simple Syrup for Cocktails & More',
-    link: 'https://www.thekitchn.com/how-to-make-simple-syrup-240337'
+    image: require('../img/distillery.jpg'),
+    time: '22 Sept 2023',
+    title: 'Best Portland Oregon Distilleries',
+    description: 'A complete list of distilleries open to the public',
+    link: 'https://portlandfoodanddrink.com/your-guide-to-distilleries-in-portland-oregon/'
   },
   {
     id:3,

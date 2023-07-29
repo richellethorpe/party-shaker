@@ -8,7 +8,7 @@ import SavedRecipes from "./SavedRecipes";
 import { Route, Routes } from "react-router-dom"
 import MultiplyForm from "./MultiplyForm";
 import CocktailRecipe from "./CocktailRecipe";
-
+import Banner from "./Banner";
 
 function App(){
 
