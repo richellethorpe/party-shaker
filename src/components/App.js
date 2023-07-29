@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom"
 import MultiplyForm from "./MultiplyForm";
 import CocktailRecipe from "./CocktailRecipe";
 import PABanner from "../img/PABanner.png"
+import SignUp from "./SignUp";
 
 function App(){
 
@@ -21,7 +22,7 @@ function App(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
           <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 
