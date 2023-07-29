@@ -23,9 +23,6 @@ body {
   padding: 0 1rem;
 }
 
-.site-title {
-  /* font-size: 2rem; */
-}
 
 .nav ul {
   padding: 0;
@@ -51,5 +48,10 @@ body {
 
 .nav li:hover {
   background-color: rgb(109, 105, 105)
+  ;
+}
+
+.customCard {
+  background-color: rgb(124, 231, 231)
   ;
 }
