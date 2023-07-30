@@ -3,6 +3,7 @@
 import Blog from "./Blog";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp"
+import AuthDetails from "./AuthDetails";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import SavedRecipes from "./SavedRecipes";
@@ -30,6 +31,7 @@ function App(){
       </div>    */}
       <SignIn />
       <SignUp />
+      <AuthDetails />
    
     </>
   );
