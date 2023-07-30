@@ -1,9 +1,9 @@
 // import React, { useState }from "react";
 // import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Blog from "./Blog";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp"
-import AuthDetails from "./AuthDetails";
+import SignIn from "./Auth/SignIn";
+import SignUp from "./Auth/SignUp";
+import AuthDetails from "./Auth/AuthDetails"
 import Navbar from "./Navbar";
 import Home from "./Home";
 import SavedRecipes from "./SavedRecipes";
@@ -16,7 +16,7 @@ function App(){
 
   return ( 
     <>
-      {/* <Navbar />
+      <Navbar />
       <img src={PABanner} className='img-fluid shadow-4' alt='...' />
 
       < div className="container">
@@ -24,14 +24,13 @@ function App(){
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
           <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 
         </Routes>
-      </div>    */}
-      <SignIn />
-      <SignUp />
-      <AuthDetails />
+      </div>   
+
    
     </>
   );
