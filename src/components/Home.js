@@ -52,25 +52,10 @@ export default function Home() {
   return (
     <>
     <Container>
-      <p>Your go to source for curating large batches of cocktails and mocktails to elevate your next party.</p>
+      <p>Your go-to source for curating large batches of cocktails and mocktails to elevate your next party.</p>
     </Container>
 
-      <div className='HomeMultiplyDrink'>
-       <header className='HomeMultiplyDrink-header'>
-        <Card className='multiplyCocktailHome'>
-      
-          <Card.Body>
-            <Card.Title>
-              Already have a drink you want to multiply?
-            </Card.Title>
-            <Card.Text>
-              Find out how much of each ingrediant you need to multiply your cocktail or mocktail to serve all your guests.
-            </Card.Text>
-            <Button onClick={()=> {navigate("/MultiplyForm")}} variant="success">Multiply your cocktail!</Button>
-          </Card.Body>
-        </Card>
-       </header>
-      </div>
+  
       <div>
       <section id="recipe" className='block recipe-block'>
         <Container fluid>
@@ -82,7 +67,7 @@ export default function Home() {
               favRecipes.map(recipe  => {
                 return(
                 <Col sm={4} key={recipe.id}>
-                  <div className='holder'>
+                  <div className='holder mb-4'>
                     <Card>
                     <Card.Img variant="top" src={recipe.image} />
                       <Card.Body>
@@ -103,6 +88,22 @@ export default function Home() {
             }
             
           </Row>
+          <div className='HomeMultiplyDrink'>
+       <header className='HomeMultiplyDrink-header'>
+        <Card className='multiplyCocktailHome'>
+      
+          <Card.Body >
+            <Card.Title>
+              Already have a drink you want to multiply?
+            </Card.Title>
+            <Card.Text>
+              Find out how much of each ingrediant you need to multiply your cocktail or mocktail to serve all your guests.
+            </Card.Text>
+            <Button onClick={()=> {navigate("/MultiplyForm")}} variant="success">Multiply your cocktail!</Button>
+          </Card.Body>
+        </Card>
+       </header>
+      </div>
         </Container>
       </section>
     </div>
