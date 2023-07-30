@@ -7,17 +7,20 @@ import { Link } from "react-router-dom";
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [signInError, setSignInError] =useState('')
+  const [signInErrorMessage, setSignInErrorMessage] =useState('')
+  const [signInMessage, setSignInMessage] =useState('')
+
 
   const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       console.log(userCredential)
+      setSignInMessage(`You've successfully signed in, ${userCredential.user.email}!`)
 
-    }).catch((error) => {
-      console.log(error);
-      setSignInError("Account does not exist, please try again or register an account")
+    }).catch((Message) => {
+      console.log(Message);
+      setSignInErrorMessage("Account does not exist, please try again or register an account")
     })
   }
   return (
@@ -27,7 +30,8 @@ const SignIn = () => {
           <Card>
             <Card.Body>
               <h2 className='text-center mb-4'>Sign In</h2>
-              {signInError && <Alert variant='danger'>{signInError}</Alert>}
+              {signInErrorMessage && <Alert variant='danger'>{signInErrorMessage}</Alert>}
+              {signInErrorMessage && <Alert variant='success'>{signInMessage}</Alert>}
 
               <Form onSubmit={signIn}>
                 <Form.Group id="email">

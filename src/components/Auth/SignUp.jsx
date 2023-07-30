@@ -7,15 +7,16 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [signUpMessage, setSignUpMessage] =useState('')
+  const [signUpErrorMessage, setSignUpErrorMessage] =useState('')
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       console.log(userCredential)
-
+      setSignUpMessage(`You've successfully signed up, ${userCredential.user.email}. Please log in.`)
     }).catch((error) => {
-      console.log(error);
+      setSignUpErrorMessage(`There was an error signing up: ${error.message}!`)
     })
   }
   return (
@@ -26,7 +27,8 @@ const SignUp = () => {
           <Card>
             <Card.Body>
               <h2 className='text-center mb-4'>Create Account</h2>
-
+              {signUpErrorMessage && <Alert variant='danger'>{signInErrorMessage}</Alert>}
+              {signUpMessage && <Alert variant='success'>{signInMessage}</Alert>}
               <Form onSubmit={signUp}>
                 <Form.Group id="email">
                   <Form.Label>Email</Form.Label>
