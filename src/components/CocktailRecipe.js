@@ -1,30 +1,43 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { Button, Card }  from 'react-bootstrap'
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
+import Card from 'react-bootstrap/Card';
 
-
-function CocktailRecipe(props) {
-  const navigate = useNavigate();
-  const location = useLocation();
-  console.log({location});
-  return (
-    <div>
-      <Card>
-        <Card.Header as="h5">Multiplied Recipe for {location.state.totalQty} total drinks</Card.Header>
-        <Card.Body>
-          <Card.Title>{location.state.drinkName}</Card.Title>
-          <Card.Text>
-            <ul>{location.state.ingredient1} - {location.state.ingredient1oz}oz</ul>
-            <ul>{location.state.ingredient2} - {location.state.ingredient2oz}oz </ul>
-            <ul>{location.state.ingredient3} - {location.state.ingredient3oz}oz </ul>
-            <ul>{location.state.ingredient4} - {location.state.ingredient4oz}oz </ul>
-          </Card.Text>
-          <Button variant="primary"onClick={()=> {navigate('/savedRecipes')}}>Save Recipe</Button>
-        </Card.Body>
-      </Card>
-    </div>
+function CocktailRecipe(props){
+  return(
+    <>
+      <div>
+        <Card>
+          <Card.Header as="h5">{props.drinkName} - {props.totalQty} total drinks</Card.Header>
+          <Card.Body>
+            <Card.Title>{props.drinkName}</Card.Title>
+            <Card.Text>
+              <ul>{props.ingredient1} - {props.ingredient1oz}oz</ul>
+              <ul>{props.ingredient2} - {props.ingredient2oz}oz </ul>
+              <ul>{props.ingredient3} - {props.ingredient3oz}oz </ul>
+              <ul>{props.ingredient4} - {props.ingredient4oz}oz </ul>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+    </>
   )
 }
 
-export default CocktailRecipe
+CocktailRecipe.propTypes = {
+  drinkName: PropTypes.string.isRequired,
+  totalQty: PropTypes.number.isRequired,
+  ingredient1: PropTypes.string.isRequired,
+  ingredient1oz: PropTypes.number.isRequired,
+  ingredient2: PropTypes.string,
+  ingredient2oz: PropTypes.number,
+  ingredient3: PropTypes.string,
+  ingredient3oz: PropTypes.number,
+  ingredient4: PropTypes.string,
+  ingredient4oz: PropTypes.number,
+  id: PropTypes.string,
+  clickSave: PropTypes.func
+
+};
+
+export default CocktailRecipe;
+

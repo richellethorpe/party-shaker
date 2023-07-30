@@ -55,7 +55,7 @@ export default function Blog() {
                         <Card.Text>
                           {blog.description}
                         </Card.Text>
-                        <a href={blog.link} target="_blank" rel="noreferrer" className='btn btn-primary'>Read More<i class="fas fa-chevron-right"></i></a>
+                        <a href={blog.link} target="_blank" rel="noreferrer" className='btn btn-primary'>Read More<i class="fa-solid fa-chevron-right"></i></a>
                       </Card.Body>
                     </Card>
                   </div>
