@@ -2,7 +2,7 @@
 
 #### By Richelle Thorpe 
 
-#### This application multiplies single cocktail recipes so that users can make large batches of the cocktail to serve the amount of total cocktails they would like to reproduce. 
+#### This application will allow users to enter the recipe of a single cocktail and how many total cocktails they would like to provide and return a multiplied recipe.
 
 ## Technologies Used
 
