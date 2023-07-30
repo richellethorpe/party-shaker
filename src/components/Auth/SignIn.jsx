@@ -31,7 +31,7 @@ const SignIn = () => {
             <Card.Body>
               <h2 className='text-center mb-4'>Sign In</h2>
               {signInErrorMessage && <Alert variant='danger'>{signInErrorMessage}</Alert>}
-              {signInErrorMessage && <Alert variant='success'>{signInMessage}</Alert>}
+              {signInMessage && <Alert variant='success'>{signInMessage}</Alert>}
 
               <Form onSubmit={signIn}>
                 <Form.Group id="email">

@@ -58,7 +58,7 @@ export default function Home() {
       <div className='HomeMultiplyDrink'>
        <header className='HomeMultiplyDrink-header'>
         <Card className='multiplyCocktailHome'>
-          {/* <Card.Img src="https://www.cupofzest.com/wp-content/uploads/2021/01/Guide-to-Batching-Cocktails-Thumbnail-of-Cocktails.jpg" alt="a picture of batched cocktails"/> */}
+      
           <Card.Body>
             <Card.Title>
               Already have a drink you want to multiply?
@@ -74,8 +74,8 @@ export default function Home() {
       <div>
       <section id="recipe" className='block recipe-block'>
         <Container fluid>
-          <div className='title-holder'>
-            <h2>Tried And True Favorites</h2>
+          <div className='title-holder mt-4'>
+            <h3>Tried And True Favorites</h3>
           </div>
           <Row>
             {
@@ -88,12 +88,12 @@ export default function Home() {
                       <Card.Body>
                         <Card.Title>{recipe.drinkName}</Card.Title>
                         <Card.Text>
-                          <ul>{recipe.ingredient1} - {recipe.ingredient1oz}oz:</ul>
-                          <ul>{recipe.ingredient2} - {recipe.ingredient2oz}oz: </ul>
-                          <ul>{recipe.ingredient3} - {recipe.ingredient3oz}oz: </ul>
-                          <ul>{recipe.ingredient4} - {recipe.ingredient4oz}oz: </ul>
+                          <ul>{recipe.ingredient1} - {recipe.ingredient1oz}oz</ul>
+                          <ul>{recipe.ingredient2} - {recipe.ingredient2oz}oz </ul>
+                          <ul>{recipe.ingredient3} - {recipe.ingredient3oz}oz </ul>
+                          <ul>{recipe.ingredient4} - {recipe.ingredient4oz}oz </ul>
                         </Card.Text>
-                        <a href={recipe.link} target="_blank" rel="noreferrer" className='btn btn-primary'>Read More<i class="fas fa-chevron-right"></i></a>
+                       
                       </Card.Body>
                     </Card>
                   </div>

@@ -24,7 +24,6 @@ function MultiplyForm({props}) {
   const navigate = useNavigate();
 
 
-
   return (
     <>
     <Container>
@@ -176,6 +175,7 @@ function MultiplyForm({props}) {
     </>
   );
 }
+
 
 
 export default MultiplyForm

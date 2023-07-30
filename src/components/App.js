@@ -13,12 +13,9 @@ import CocktailRecipe from "./CocktailRecipe";
 import PABanner from "../img/PABanner.png"
 
 
-function App(){
-  // const[isUserLoggedIn, setUserLoggedIn] = useState(false);
 
-  // const userAthentication = () =>{
-  //   setUserLoggedIn(!isUserLoggedIn)
-  // }
+function App(){
+
 
   return ( 
     <>
@@ -31,6 +28,7 @@ function App(){
           <Route path="/blog" element={<Blog />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+       
           <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
           <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 

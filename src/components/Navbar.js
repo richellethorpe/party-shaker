@@ -8,9 +8,10 @@ export default function Navbar() {
         <Link to="/" className="site-title">Home</Link>
         <ul>
           
-          <CustomLink to="/savedrecipes">Saved Recipes</CustomLink>
+          <CustomLink to="/multiplyForm">Batch Recipe</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
           <CustomLink to="/signin">SignIn</CustomLink>
+         
 
         </ul>
       </nav>
