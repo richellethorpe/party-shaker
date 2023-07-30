@@ -46,7 +46,7 @@ function MultiplyForm({props}) {
                       <Form.Label>Drink Name</Form.Label>
                       <Form.Control
                         type="text"  
-                        placeholder="Gin Fizz"   
+                        placeholder="Ex: Gin Fizz"   
                         onChange={(e) => setDrinkName(e.target.value)}/>            
                     </Form.Group>
                   </Row>

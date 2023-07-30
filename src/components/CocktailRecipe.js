@@ -15,10 +15,10 @@ function CocktailRecipe(props) {
         <Card.Body>
           <Card.Title>{location.state.drinkName}</Card.Title>
           <Card.Text>
-            <ul>{location.state.ingredient1} - {location.state.ingredient1oz}oz:</ul>
-            <ul>{location.state.ingredient2} - {location.state.ingredient2oz}oz: </ul>
-            <ul>{location.state.ingredient3} - {location.state.ingredient3oz}oz: </ul>
-            <ul>{location.state.ingredient4} - {location.state.ingredient4oz}oz: </ul>
+            <ul>{location.state.ingredient1} - {location.state.ingredient1oz}oz</ul>
+            <ul>{location.state.ingredient2} - {location.state.ingredient2oz}oz </ul>
+            <ul>{location.state.ingredient3} - {location.state.ingredient3oz}oz </ul>
+            <ul>{location.state.ingredient4} - {location.state.ingredient4oz}oz </ul>
           </Card.Text>
           <Button variant="primary"onClick={()=> {navigate('/savedRecipes')}}>Save Recipe</Button>
         </Card.Body>

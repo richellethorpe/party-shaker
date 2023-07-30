@@ -4,7 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
+
 const blogData = [
+
   {
     id:1,
     image: require('../img/simple.jpg'),
@@ -46,8 +48,8 @@ export default function Blog() {
               blogData.map(blog  => {
                 return(
                 <Col sm={4} key={blog.id}>
-                  <div className='holder'>
-                    <Card>
+                  <div >
+                    <Card >
                       <Card.Img variant="top" src={blog.image} />
                       <Card.Body>
                         <time>{blog.time}</time>
