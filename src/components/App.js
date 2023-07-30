@@ -3,10 +3,8 @@ import React, { useState }from "react";
 import Blog from "./Blog";
 import SignIn from "./Auth/SignIn";
 import SignUp from "./Auth/SignUp";
-import AuthDetails from "./Auth/AuthDetails"
 import Navbar from "./Navbar";
 import Home from "./Home";
-import SavedRecipes from "./SavedRecipes";
 import { Route, Routes } from "react-router-dom"
 import MultiplyForm from "./MultiplyForm";
 import CocktailRecipe from "./CocktailRecipe";
@@ -28,8 +26,6 @@ function App(){
           <Route path="/blog" element={<Blog />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-       
-          <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/multiplyForm" element={<MultiplyForm />} />
           <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 
         </Routes>

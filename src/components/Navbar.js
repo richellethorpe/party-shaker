@@ -11,6 +11,7 @@ export default function Navbar() {
           <CustomLink to="/multiplyForm">Batch Recipe</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
           <CustomLink to="/signin">SignIn</CustomLink>
+          
          
 
         </ul>
