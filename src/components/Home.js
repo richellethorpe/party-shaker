@@ -14,10 +14,10 @@ import { useNavigate } from "react-router-dom"
     ingredient1oz: 2, 
     ingredient2: "Lemon", 
     ingredient2oz: 1, 
-    ingredient3: "Simple Syrup", 
+    ingredient3: "Honey", 
     ingredient3oz: 1, 
-    ingredient4: "Honey", 
-    ingredient4oz: 1, 
+    ingredient4: "Bitters", 
+    ingredient4oz: .05, 
     id: 1
   },
   {
@@ -42,7 +42,8 @@ import { useNavigate } from "react-router-dom"
     ingredient2oz: 1, 
     ingredient3: "Sweet Vermouth", 
     ingredient3oz: 1, 
-
+    ingredient4: "Orange Bitters", 
+    ingredient4oz: .05, 
     id: 3
   }
 
