@@ -53,8 +53,8 @@
 │   ├── SignIn.jsx/SignUp.jsx
 │   ├── Inventory.js   
 │   │   
-│      
-│     
+      
+```     
 
 ## Known Bugs
 
