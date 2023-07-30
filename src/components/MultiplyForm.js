@@ -23,7 +23,6 @@ function MultiplyForm({props}) {
   const [drinkName, setDrinkName] = useState("")
   const navigate = useNavigate();
 
-
   return (
     <>
     <Container>

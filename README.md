@@ -13,6 +13,7 @@
 - ASP.NET Core
 - Markdown
 - Entity Framework Core
+- CSS /React-Bootstrap
 
 
 ## Description

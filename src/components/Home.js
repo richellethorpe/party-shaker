@@ -3,9 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Card, Container, Row, Col }  from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
 
-
-
-
   const favRecipes =[
   {
     image: require('../img/bees.jpeg'),

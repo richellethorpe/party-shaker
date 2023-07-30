@@ -59,3 +59,11 @@ body {
 .multiplyCocktailHome {
   background-color: rgb(249, 228, 113);
 }
+
+
+.blogcard {
+  border-width: 3px;
+  border-color: black
+  
+  ;
+}
