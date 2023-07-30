@@ -1,4 +1,4 @@
-// import React, { useState }from "react";
+import React, { useState }from "react";
 // import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Blog from "./Blog";
 import SignIn from "./Auth/SignIn";
@@ -12,11 +12,17 @@ import MultiplyForm from "./MultiplyForm";
 import CocktailRecipe from "./CocktailRecipe";
 import PABanner from "../img/PABanner.png"
 
+
 function App(){
+  // const[isUserLoggedIn, setUserLoggedIn] = useState(false);
+
+  // const userAthentication = () =>{
+  //   setUserLoggedIn(!isUserLoggedIn)
+  // }
 
   return ( 
     <>
-      <Navbar />
+      {/* <Navbar isUserLoggedIn={isUserLoggedIn} userAthentication={userAthentication}/> */}
       <img src={PABanner} className='img-fluid shadow-4' alt='...' />
 
       < div className="container">
