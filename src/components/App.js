@@ -22,7 +22,7 @@ function App(){
 
   return ( 
     <>
-      {/* <Navbar isUserLoggedIn={isUserLoggedIn} userAthentication={userAthentication}/> */}
+      <Navbar />
       <img src={PABanner} className='img-fluid shadow-4' alt='...' />
 
       < div className="container">
