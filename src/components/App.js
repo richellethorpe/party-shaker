@@ -1,42 +1,40 @@
-import React from "react";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./Home"
-import SavedRecipes from "./SavedRecipes"
-import Login from "./Login"
-import Error from "./Error"
-import Blog from "./Blog"
-import Navbar from "./Navbar"
-// import { Container } from "react-bootstrap";
-// import { AuthProvider } from "../contexts/AuthContext";
-
-// import Navbar from "./Navbar";
-
+import React, { useState }from "react";
+// import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Blog from "./Blog";
+import SignIn from "./Auth/SignIn";
+import SignUp from "./Auth/SignUp";
+import AuthDetails from "./Auth/AuthDetails"
+import Navbar from "./Navbar";
+import Home from "./Home";
+import SavedRecipes from "./SavedRecipes";
+import { Route, Routes } from "react-router-dom"
+import MultiplyForm from "./MultiplyForm";
+import CocktailRecipe from "./CocktailRecipe";
+import PABanner from "../img/PABanner.png"
 
 
 function App(){
+
+
   return ( 
     <>
-    <Login />
-      {/* <Router>
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/savedrecipes">Saved Recipes</Link>
-          <Link to="/blog">Blog</Link>
+      <Navbar />
+      <img src={PABanner} className='img-fluid shadow-4' alt='...' />
 
-        </nav>
+      < div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/savedrecipes" element={<SavedRecipes />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/*" element={<Error />} />
-
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/savedrecipes" element={<SavedRecipes />} />
+          <Route path="/multiplyForm" element={<MultiplyForm />} />
+          <Route path="/cocktailRecipe" element={<CocktailRecipe />} /> 
         </Routes>
-      </Router>
-     */}
-      </>  
-  
+      </div>   
+
+   
+    </>
   );
 }
 

@@ -4,11 +4,17 @@
 
 body {
   margin: 0;
-  background-color: #FFFCE8;
+  background-color: white
+  ;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
 }
 
 .nav {
-  background-color: #697a21;
+  background-color: black;
   color:white;
   display: flex;
   justify-content: space-between;
@@ -17,9 +23,6 @@ body {
   padding: 0 1rem;
 }
 
-.site-title {
-  font-size: 2rem;
-}
 
 .nav ul {
   padding: 0;
@@ -39,9 +42,20 @@ body {
 }
 
 .nav li.active {
-  background-color: #929e38;
+  background-color: rgb(75, 72, 72)
+  ;
 }
 
 .nav li:hover {
-  background-color: #78882e;
+  background-color: rgb(109, 105, 105)
+  ;
+}
+
+.customCard {
+  background-color: rgb(124, 231, 231)
+  ;
+}
+
+.multiplyCocktailHome {
+  background-color: rgb(249, 228, 113);
 }
