@@ -43,7 +43,6 @@
 
 ## Component Diagram
 ```
-Router.js
 
 ├── App.js
 │   ├── NavBar.js
