@@ -4,7 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
+
 const blogData = [
+
   {
     id:1,
     image: require('../img/simple.jpg'),
@@ -15,7 +17,7 @@ const blogData = [
   },
   {
     id:2,
-    image: require('../img/distillery.jpg'),
+    image: require('../img/spirits.jpg'),
     time: '22 Sept 2023',
     title: 'Best Portland Oregon Distilleries',
     description: 'A complete list of distilleries open to the public',
@@ -46,8 +48,8 @@ export default function Blog() {
               blogData.map(blog  => {
                 return(
                 <Col sm={4} key={blog.id}>
-                  <div className='holder'>
-                    <Card>
+                  <div className='mt-3'>
+                    <Card className= "blogcard" style={{height:"28rem"}}>
                       <Card.Img variant="top" src={blog.image} />
                       <Card.Body>
                         <time>{blog.time}</time>

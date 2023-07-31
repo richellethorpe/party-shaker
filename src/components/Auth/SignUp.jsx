@@ -1,21 +1,22 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { auth } from '../../firebase';
-import {Card, Form, Button, Container} from "react-bootstrap"
+import {Card, Form, Button, Container, Alert} from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [signUpMessage, setSignUpMessage] =useState('')
+  const [signUpErrorMessage, setSignUpErrorMessage] =useState('')
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       console.log(userCredential)
-
+      setSignUpMessage(`You've successfully signed up, ${userCredential.user.email}. Please log in.`)
     }).catch((error) => {
-      console.log(error);
+      setSignUpErrorMessage(`There was an error signing up: ${error.message}!`)
     })
   }
   return (
@@ -26,7 +27,8 @@ const SignUp = () => {
           <Card>
             <Card.Body>
               <h2 className='text-center mb-4'>Create Account</h2>
-
+              {signUpErrorMessage && <Alert variant='danger'>{signUpErrorMessage}</Alert>}
+              {signUpMessage && <Alert variant='success'>{signUpMessage}</Alert>}
               <Form onSubmit={signUp}>
                 <Form.Group id="email">
                   <Form.Label>Email</Form.Label>

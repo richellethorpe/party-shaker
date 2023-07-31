@@ -11,6 +11,7 @@ import {
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
+<<<<<<< HEAD
 
 function MultiplyForm(props){
   const navigate =useNavigate();  
@@ -31,6 +32,8 @@ function MultiplyForm(props){
     });
   }
 
+=======
+>>>>>>> useState
   return (
     <>
     <Container>
@@ -52,7 +55,12 @@ function MultiplyForm(props){
                       <Form.Label>Drink Name</Form.Label>
                       <Form.Control
                         type="text"  
+<<<<<<< HEAD
                         placeholder="Gin Fizz" />   
+=======
+                        placeholder="Ex: Gin Fizz"   
+                        onChange={(e) => setDrinkName(e.target.value)}/>            
+>>>>>>> useState
                     </Form.Group>
                   </Row>
                   <Row className="mb-3">
@@ -183,6 +191,7 @@ function MultiplyForm(props){
 MultiplyForm.propTypes = {
   onNewRecipeCreation: PropTypes.func
 };
+
 
 
 
