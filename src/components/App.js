@@ -11,14 +11,9 @@ import CocktailRecipe from "./CocktailRecipe";
 import PABanner from "../img/PABanner.png"
 
 
-<<<<<<< HEAD
-function App(){
-
-=======
 
 function App(){
 
->>>>>>> useState
 
   return ( 
     <>

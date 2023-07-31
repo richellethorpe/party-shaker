@@ -1,39 +1,13 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+
 import {
   Col,
-  Button,
-  Row,
-  Container,
-  Card,
+
   Form,
 } from "react-bootstrap";
 import PropTypes from "prop-types";
-import { v4 } from "uuid";
 
-<<<<<<< HEAD
 
-function MultiplyForm(props){
-  const navigate =useNavigate();  
-  function handleMultiplyForm(event){
-    event.preventDefault();
-    props.onNewRecipeCreation({
-      drinkName: event.target.drinkName.value,
-      totalQty: event.target.totalQty.value,
-      ingredient1: event.target.ingredient1.value, 
-      ingredient1oz: event.target.ingredient1oz.value, 
-      ingredient2: event.target.ingredient2.value, 
-      ingredient2oz: event.target.ingredient2oz.value, 
-      ingredient3: event.target.ingredient3.value, 
-      ingredient3oz: event.target.ingredient3oz.value, 
-      ingredient4: event.target.ingredient4.value, 
-      ingredient4oz: event.target.ingredient4oz.value, 
-      id: v4()
-    });
-  }
-
-=======
->>>>>>> useState
   return (
     <>
     <Container>
@@ -55,12 +29,8 @@ function MultiplyForm(props){
                       <Form.Label>Drink Name</Form.Label>
                       <Form.Control
                         type="text"  
-<<<<<<< HEAD
-                        placeholder="Gin Fizz" />   
-=======
                         placeholder="Ex: Gin Fizz"   
                         onChange={(e) => setDrinkName(e.target.value)}/>            
->>>>>>> useState
                     </Form.Group>
                   </Row>
                   <Row className="mb-3">
